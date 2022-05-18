@@ -1,3 +1,5 @@
+const path = require('path');
+
 const config = {
   projectName: 'taro-demo',
   date: '2022-5-18',
@@ -11,6 +13,9 @@ const config = {
   sourceRoot: 'src',
   outputRoot: 'dist',
   plugins: ['@tarojs/plugin-html'],
+  alias: {
+    '@/components': path.resolve(__dirname, '..', 'src/components'),
+  },
   defineConstants: {
   },
   copy: {
@@ -20,7 +25,7 @@ const config = {
     }
   },
   framework: 'vue3',
-  sass:{
+  sass: {
     data: `@import "@nutui/nutui-taro/dist/styles/variables.scss";`
   },
   mini: {

@@ -1,30 +1,36 @@
 <template>
+  <nut-navbar title="浏览记录" desc="清空"></nut-navbar>
   <view class="index">
     <view>
-      <img src="" alt="">
+      <img src="" alt="" />
     </view>
     {{ msg }}
     <view class="btn">
-      <nut-button type="primary" @click="handleClick('text', msg2, true)">点我</nut-button>
+      <nut-button type="primary" @click="handleClick('text', msg2, true)"
+        >点我</nut-button
+      >
     </view>
     <nut-toast :msg="msg" v-model:visible="show" :type="type" :cover="cover" />
   </view>
+  <Tabber />
 </template>
 
 <script>
-import { reactive, toRefs } from 'vue';
+import { reactive, toRefs } from "vue";
+import Tabber from "@/components/layouts/tabbar";
+
 export default {
-  name: 'Index',
+  name: "Index",
   components: {
-    
+    Tabber,
   },
-  setup(){
+  setup() {
     const state = reactive({
-      msg: '欢迎使用 NutUI3.0 开发小程序',
-      msg2: '你成功了～',
-      type: 'text',
+      msg: "欢迎使用 NutUI3.0 开发小程序",
+      msg2: "你成功了～",
+      type: "text",
       show: false,
-      cover: false
+      cover: false,
     });
 
     const handleClick = (type, msg, cover = false) => {
@@ -36,10 +42,10 @@ export default {
 
     return {
       ...toRefs(state),
-      handleClick
-    }
-  }
-}
+      handleClick,
+    };
+  },
+};
 </script>
 
 <style lang="scss">

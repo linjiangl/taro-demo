@@ -1,5 +1,4 @@
 <template>
-  <nut-navbar title="浏览记录" desc="清空"></nut-navbar>
   <view class="index">
     <view>
       <img src="" alt="" />
@@ -15,9 +14,9 @@
   <Tabber />
 </template>
 
-<script>
+<script lang="ts">
 import { reactive, toRefs } from "vue";
-import Tabber from "@/components/layouts/tabbar";
+import Tabber from "@/components/layouts/tabbar/index.vue";
 
 export default {
   name: "Index",

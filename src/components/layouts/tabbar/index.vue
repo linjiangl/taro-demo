@@ -4,8 +4,9 @@
     :safeAreaInsetBottom="true"
     v-model:visible="active"
     @tab-switch="tabSwitch"
+    v-if="0"
   >
-    <nut-tabbar-item tab-title="首页" icon="home"></nut-tabbar-item>
+    <nut-tabbar-item tab-title="首页" icon="home" to=""></nut-tabbar-item>
     <nut-tabbar-item tab-title="分类" icon="category"></nut-tabbar-item>
     <nut-tabbar-item tab-title="发现" icon="find"></nut-tabbar-item>
     <nut-tabbar-item tab-title="购物车" icon="cart"></nut-tabbar-item>
@@ -14,13 +15,18 @@
 </template>
 
 <script lang="ts">
-import { reactive, toRefs } from "vue";
+import { reactive, toRefs, onMounted } from "vue";
 import Taro from "@tarojs/taro";
 
 export default {
-  setup() {
+  props: ["active"],
+  setup(props) {
     const data = reactive({
-      active: 1
+      active: props.active
+    });
+
+    onMounted(() => {
+      // data.active = Taro.getStorageSync("222") ? Taro.getStorageSync("222") : 0;
     });
 
     const tabSwitch = (_item, index) => {
@@ -33,8 +39,15 @@ export default {
           url = "/pages/user/index";
           break;
       }
-      Taro.switchTab({
-        url
+
+      Taro.setStorage({
+        key: "222",
+        data: index,
+        success: () => {
+          Taro.switchTab({
+            url
+          });
+        }
       });
     };
 

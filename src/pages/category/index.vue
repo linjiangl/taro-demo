@@ -4,7 +4,7 @@
     </nut-categorypane>
   </nut-category>
 
-  <Tabber />
+  <Tabber :active="1" />
 </template>
 
 <script lang="ts">

@@ -1,7 +1,7 @@
 <template>
   <view>用户中心</view>
   <navigator url="/pages/user/address/index">收货地址</navigator>
-  <Tabber />
+  <Tabber :active="4" />
 </template>
 
 <script lang="ts">

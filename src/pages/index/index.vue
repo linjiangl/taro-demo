@@ -11,7 +11,7 @@
     </view>
     <nut-toast :msg="msg" v-model:visible="show" :type="type" :cover="cover" />
   </view>
-  <Tabber />
+  <Tabber :active="0" />
 </template>
 
 <script lang="ts">

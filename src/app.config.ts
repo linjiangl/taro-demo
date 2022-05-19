@@ -1,23 +1,15 @@
-const subpackages = [
-  // {
-  //   root: 'category',
-  //   pages: [
-  //     'pages/category/index',
-  //   ]
-  // }
-];
-
 export default defineAppConfig({
   pages: [
-    'pages/index/index',
-    'pages/category/index'
+    "pages/index/index",
+    "pages/category/index",
+    "pages/user/index",
+    "pages/user/address/index"
   ],
-  subpackages,
   window: {
-    backgroundTextStyle: 'light',
-    navigationBarBackgroundColor: '#fff',
-    navigationBarTitleText: 'WeChat',
-    navigationBarTextStyle: 'black'
+    backgroundTextStyle: "light",
+    navigationBarBackgroundColor: "#fff",
+    navigationBarTitleText: "WeChat",
+    navigationBarTextStyle: "black"
   },
   tabBar: {
     custom: true,
@@ -32,7 +24,11 @@ export default defineAppConfig({
       {
         pagePath: "pages/category/index",
         text: "分类"
+      },
+      {
+        pagePath: "pages/user/index",
+        text: "我的"
       }
     ]
   }
-})
+});

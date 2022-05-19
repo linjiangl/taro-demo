@@ -13,14 +13,14 @@ import Tabber from "@/components/layouts/tabbar/index.vue";
 import list from "./index.json";
 
 export default {
-   components: {
-    Tabber,
+  components: {
+    Tabber
   },
   setup() {
     const data = reactive({
       categoryInfo: {},
       category: [{}],
-      categoryChild: [{}],
+      categoryChild: [{}]
     });
 
     onMounted(() => {
@@ -38,7 +38,7 @@ export default {
 
     const change = (index: any) => {
       data.categoryChild = [].concat(
-        data.categoryInfo.category[index + 1].children as any
+        data.categoryInfo["category"][index + 1].children as any
       );
     };
     const onChange = () => {
@@ -47,8 +47,8 @@ export default {
     return {
       onChange,
       change,
-      ...toRefs(data),
+      ...toRefs(data)
     };
-  },
+  }
 };
 </script>

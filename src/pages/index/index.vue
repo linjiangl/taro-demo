@@ -21,7 +21,7 @@ import Tabber from "@/components/layouts/tabbar/index.vue";
 export default {
   name: "Index",
   components: {
-    Tabber,
+    Tabber
   },
   setup() {
     const state = reactive({
@@ -29,7 +29,7 @@ export default {
       msg2: "你成功了～",
       type: "text",
       show: false,
-      cover: false,
+      cover: false
     });
 
     const handleClick = (type, msg, cover = false) => {
@@ -41,9 +41,9 @@ export default {
 
     return {
       ...toRefs(state),
-      handleClick,
+      handleClick
     };
-  },
+  }
 };
 </script>
 

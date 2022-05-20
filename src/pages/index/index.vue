@@ -11,18 +11,14 @@
     </view>
     <nut-toast :msg="msg" v-model:visible="show" :type="type" :cover="cover" />
   </view>
-  <Tabber :active="0" />
 </template>
 
 <script lang="ts">
 import { reactive, toRefs } from "vue";
-import Tabber from "@/components/layouts/tabbar/index.vue";
 
 export default {
   name: "Index",
-  components: {
-    Tabber
-  },
+
   setup() {
     const state = reactive({
       msg: "欢迎使用 NutUI3.0 开发小程序",

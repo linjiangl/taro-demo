@@ -2,8 +2,12 @@ export default defineAppConfig({
   pages: [
     "pages/index/index",
     "pages/category/index",
-    "pages/user/index",
-    "pages/user/address/index"
+    "pages/product/index",
+    "pages/cart/index",
+    "pages/my/index",
+    "pages/my/address/index",
+    "pages/my/order/index",
+    "pages/my/message/index"
   ],
   window: {
     backgroundTextStyle: "light",
@@ -12,10 +16,10 @@ export default defineAppConfig({
     navigationBarTextStyle: "black"
   },
   tabBar: {
-    custom: false,
     color: "#000000",
     selectedColor: "#fa2c19",
     backgroundColor: "#ffffff",
+    borderStyle: "black",
     list: [
       {
         iconPath: "assets/images/tabbar/home.png",
@@ -32,13 +36,13 @@ export default defineAppConfig({
       {
         iconPath: "assets/images/tabbar/cart.png",
         selectedIconPath: "assets/images/tabbar/cart-hover.png",
-        pagePath: "pages/user/address/index",
+        pagePath: "pages/cart/index",
         text: "购物车"
       },
       {
         iconPath: "assets/images/tabbar/my.png",
         selectedIconPath: "assets/images/tabbar/my-hover.png",
-        pagePath: "pages/user/index",
+        pagePath: "pages/my/index",
         text: "我的"
       }
     ]

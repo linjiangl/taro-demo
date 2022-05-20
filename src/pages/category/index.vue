@@ -3,19 +3,13 @@
     <nut-categorypane :categoryChild="categoryChild" @onChange="onChange">
     </nut-categorypane>
   </nut-category>
-
-  <Tabber :active="1" />
 </template>
 
 <script lang="ts">
 import { reactive, toRefs, onMounted } from "vue";
-import Tabber from "@/components/layouts/tabbar/index.vue";
 import list from "./index.json";
 
 export default {
-  components: {
-    Tabber
-  },
   setup() {
     const data = reactive({
       categoryInfo: {},

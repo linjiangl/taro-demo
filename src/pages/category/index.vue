@@ -1,34 +1,28 @@
 <template>
   <view class="container">
     <view id="search">
-      <SearchBar
+      <nut-searchbar
         v-model="searchValue"
         @search="onSearch"
         background="linear-gradient(to right, #9866F0, #EB4D50)"
         input-background="#fff"
-      ></SearchBar>
+      ></nut-searchbar>
     </view>
 
     <view class="main">
-      <Category :category="category" @change="change">
-        <CategoryPane :categoryChild="categoryChild" @onChange="onChange">
-        </CategoryPane>
-      </Category>
+      <nut-category :category="category" @change="change">
+        <nut-categorypane :categoryChild="categoryChild" @onChange="onChange">
+        </nut-categorypane>
+      </nut-category>
     </view>
   </view>
 </template>
 
 <script lang="ts">
-import { Category, CategoryPane, SearchBar } from "@nutui/nutui-taro";
 import { reactive, toRefs, onMounted } from "vue";
 import list from "./index.json";
 
 export default {
-  components: {
-    Category,
-    CategoryPane,
-    SearchBar
-  },
   setup() {
     const data = reactive({
       categoryInfo: {},

@@ -1,4 +1,4 @@
-import { createApp } from "vue";
+import { createApp } from 'vue'
 import {
   Row,
   Col,
@@ -16,16 +16,16 @@ import {
   SearchBar,
   Checkbox,
   CheckboxGroup
-} from "@nutui/nutui-taro";
+} from '@nutui/nutui-taro'
 
-import "./app.scss";
+import './app.scss'
 
 const App = createApp({
   onShow(options) {
-    console.log(options);
+    console.log(options)
   }
   // 入口组件不需要实现 render 方法，即使实现了也会被 taro 所覆盖
-});
+})
 
 App.use(Row)
   .use(Col)
@@ -42,6 +42,6 @@ App.use(Row)
   .use(CategoryPane)
   .use(SearchBar)
   .use(Checkbox)
-  .use(CheckboxGroup);
+  .use(CheckboxGroup)
 
-export default App;
+export default App

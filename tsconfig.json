@@ -18,18 +18,11 @@
     "jsx": "preserve",
     "allowJs": true,
     "resolveJsonModule": true,
-    "typeRoots": [
-      "node_modules/@types"
-    ],
+    "typeRoots": ["node_modules/@types"],
     "paths": {
-      "@/components/*": [
-        "./src/components/*"
-      ],
+      "@/components/*": ["./src/components/*"]
     }
   },
-  "include": [
-    "./src",
-    "global.d.ts"
-  ],
+  "include": ["./src", "global.d.ts"],
   "compileOnSave": false
 }

@@ -4,7 +4,7 @@
 </template>
 
 <script lang="ts">
-import { reactive, toRefs } from "vue";
+import { reactive, toRefs } from 'vue'
 
 export default {
   setup() {
@@ -12,13 +12,13 @@ export default {
       categoryInfo: {},
       category: [{}],
       categoryChild: [{}]
-    });
+    })
 
     return {
       ...toRefs(data)
-    };
+    }
   }
-};
+}
 </script>
 
 <style lang="scss"></style>

@@ -15,7 +15,8 @@ import {
   CategoryPane,
   SearchBar,
   Checkbox,
-  CheckboxGroup
+  CheckboxGroup,
+  Image
 } from '@nutui/nutui-taro'
 
 import './app.scss'
@@ -43,5 +44,6 @@ App.use(Row)
   .use(SearchBar)
   .use(Checkbox)
   .use(CheckboxGroup)
+  .use(Image)
 
 export default App
